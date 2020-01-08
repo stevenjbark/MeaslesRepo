@@ -1,0 +1,33 @@
+The Global Epidemic that Didn't Need to Be: Vaccination and Measles
+
+The recent outbreak of communicable diseases including Measles has demonstrated the importance of immunization. Measles
+vaccination is a two-injection regimen that provides >90% effective protection when administered properly. However, the
+recent outbreaks suggest adherence to this immunization recommendation is failing, with concomitant increases in Measles
+cases reported worldwide. Epidemics of this preventable disease are becoming commonplace.
+
+This project will use multiple sources to evaluate and correlate recent outbreaks of Measles by country and global region, 
+socioeconomic information, and the vaccination data available for these countries, regions, and populations.
+
+
+
+Measles Data
+
+World Health Organization Data on Active Measles and Rubella 
+https://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/
+
+World Health Organization
+http://apps.who.int/immunization_monitoring/globalsummary/wucoveragecountrylist.html
+
+Global Health Organization API
+http://apps.who.int/gho/data/node.resources.api 
+
+
+Measles-containing-vaccine first-dose (MCV1) immunization coverage among 1-year-olds (%) (Universal health coverage)
+http://apps.who.int/gho/data/node.imr.WHS8_110?lang=en
+
+Measles-containing-vaccine second-dose (MCV2) immunization coverage by the nationally recommended age (%) (Universal health coverage)
+http://apps.who.int/gho/data/node.imr.MCV2?lang=en
+
+
+Wikipedia Table (Scraping for Table)
+https://en.wikipedia.org/wiki/Measles
