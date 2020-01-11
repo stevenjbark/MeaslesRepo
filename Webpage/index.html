@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEASLES</title>
+
+     <!-- Bring in our bootstrap stylesheet with integrity checking. Confirmed using SRI Hash Generator -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- Initiate a container for LandingPage, then rows and columns-->
+<h1>MEASLES: THE EPIDEMIC THAT DIDN'T NEED TO HAPPEN</h1><br><br><br>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+            <div class="col-lg-7">
+                <p>Measles is a highly-contageous and deadly disease that was a scourge of humanity for millenia. Measles is caused by the Rubeola Virus and is related to another virus causing
+                    German Measles (Rubella). However, these are distinctly different diseases and the differences in viruses required unique vaccines. The Edmonston strain of Measles was developed
+                    in 1963 and quickly became the primary bacterial strain for developing the first viable vaccine for Measles. While development of effective vaccines is a huge undertaking, 
+                    notable people including Anton Schwarz at Pitman Moore-Dow and Maurice Hilleman at Merck were important contributors for further attenuated vaccine development in the United States.
+                    Within the next decade after adoption of these highly-effective vaccines, the number of Measles cases in the United States decreased from millions to few-thousands. These vaccines 
+                    are the primary defense against Measles worldwide.
+                </p><br>
+                <p>The recent increase of "Anti-Vaxxers" or people specifically targeting the health damages caused by vaccination have caused extreme damage for human health and, in the case of Measles,
+                    the health of children and vulnerable populations across the globe. A study by Andrew Wakefield published in The Lancet in 1998 showed a link between the Measles-Mumps_Rubella (MMR) vaccine
+                    and autism-spectrum disorders. However, multiple subsequent studies have failed to find this same correlation and demonstrated fundamental failures in the original Wakefield Study.
+                    Scientific analysis across dozens of laboratories studying MMR vaccination have concluded that the Wakefield study was fraudulent and has since been retracted from publication. However,
+                    this fraudulent study has aroused suspicions and fear in both developed and developing countries. The resulting reduction in vaccination rates is directly contributing to recent outbreaks of
+                    Measles worldwide, especially in Africa.
+
+                </p><br>
+
+                <h2>Summary of Brief Study</h2><br>
+                <p>
+                    Data tables from the World Health Organization (WHO) were queried in Python/Pandas, aligned by World Regions, then culled for specific representative data for vaccination rates, Measles 
+                    incidences and infections, and specific year data across the ranges of dates available (back to 1980 when data collection was initiated. These tables include monthly data for Measles infections, 
+                    and vaccination rates for both First Measles Containing (MCV1) Coverage and Second Measles-Containing Vaccine (MCV2) Coverage by global regions. Correlations across these tables were identified 
+                    by reformatting and reconstruction of several new tables appended below. 
+                </p>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4">
+                <div class="panel primary-panel">
+                    <h4>Child with Measles Rash</h4>
+                    <img class="img-fluid" id="a1" src="RougeoleDP.jpg"
+                        height=300px
+                        />
+                </div>
+            </div>
+
+            <div class="col-lg-1 col-md-4">
+            </div>
+        </div><br>
+
+        <div class="row">
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+            <div class="col-lg-10">
+                <div class="panel primary-panel">
+                    <img class="img-fluid" src="Measles_world_map-Deaths_per_million_persons-WHO2012.png "
+                    />
+                </div>
+                <h4>Global Representation of Measles Deaths by Country per Million Persons</h4>
+                <p>
+                    Color representation of the number of deaths by Measles per million persons. Yellow is the lowest number of deaths (0/Million) and Dark Red represents the highest number of deaths (74-850/Million).
+                    Image courtesy of Wikipedia (https://en.wikipedia.org/wiki/Measles#/media/File:Measles_world_map-Deaths_per_million_persons-WHO2012.svg) and is based on World Health Organization data table for 2012
+                    (http://www.who.int/entity/healthinfo/global_burden_disease/GHE_Deaths_2012_country.xls?ua=1).
+                </p> 
+            </div>
+        </div>
+
+        <div class="col-lg-1 col-md-4">
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+            <div class="col-lg-10">
+                <h2>Results of Brief Study</h2><br>
+                <p>
+                    The results of this simple study show a clear correlation between reduction of Measles infectionis with increased vaccination coverage (Measles_Vaccine_Correlation.html). As is directly evident from
+                    the Global Representation of Measles Deaths by Country per Million Persons above, deaths in Africa are well above the global average in most countries. Evaluation of the African Region in both Tables
+                    here show that, even while the first vaccine dose (MCV1) rates are reasonabel (74% currently), the required second dose (MCV2) is only 26%! This is well below the 90% requirement to induce long-term
+                    immunity to the Rubeola virus. These data correlate clearly with the very high increased incidences of Measles in the African Region. There also appears to be a very significant increase of Measles in
+                    the Western Pacific Region despite high vaccination rates for MCV1 and MCV2. These data suggest there may be specific countries within the Western Pacific Region that are responsible for higher disease
+                    incidence. Indeed, evaluation of the Global Representation of Measles Deaths show that relatively few African countries are responsible for the majority of Measles deaths. Further evaluation of 
+                    vaccination data at more granular levels (country, state, local regions, cities) would be informative and warranted.  
+                </p>
+            </div>
+
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+        </div>
+
+
+    <div class="row">
+        <div class="col-lg-1 col-md-4">
+        </div>
+
+        <div class="col-lg-10">
+        <h3>Measles Vaccine Correlation by World Region</h3><br>
+
+            <table border="1" class="dataframe">
+                <thead>
+                  <tr style="text-align: right;">
+                    <th></th>
+                    <th>index</th>
+                    <th>WHO-Region</th>
+                    <th>1980</th>
+                    <th>1990</th>
+                    <th>2000</th>
+                    <th>2005</th>
+                    <th>2014</th>
+                    <th>Percent Increase 2018-2019(Total Measles)</th>
+                    <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+                    <th>MCV2 Coverage, 1-Year-Olds (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th>0</th>
+                    <td>0</td>
+                    <td>African Region</td>
+                    <td>1240993</td>
+                    <td>481204</td>
+                    <td>520102</td>
+                    <td>316224</td>
+                    <td>71574</td>
+                    <td>341.738307</td>
+                    <td>74</td>
+                    <td>26</td>
+                  </tr>
+                  <tr>
+                    <th>1</th>
+                    <td>1</td>
+                    <td>Region of the Americas</td>
+                    <td>257790</td>
+                    <td>218579</td>
+                    <td>1755</td>
+                    <td>66</td>
+                    <td>19898</td>
+                    <td>94.158879</td>
+                    <td>90</td>
+                    <td>82</td>
+                  </tr>
+                  <tr>
+                    <th>2</th>
+                    <td>2</td>
+                    <td>Eastern Mediterranean Region</td>
+                    <td>341624</td>
+                    <td>59058</td>
+                    <td>38592</td>
+                    <td>15069</td>
+                    <td>28031</td>
+                    <td>29.699793</td>
+                    <td>82</td>
+                    <td>74</td>
+                  </tr>
+                  <tr>
+                    <th>3</th>
+                    <td>3</td>
+                    <td>European Region</td>
+                    <td>851849</td>
+                    <td>234827</td>
+                    <td>37421</td>
+                    <td>37332</td>
+                    <td>16899</td>
+                    <td>114.192777</td>
+                    <td>95</td>
+                    <td>91</td>
+                  </tr>
+                  <tr>
+                    <th>4</th>
+                    <td>4</td>
+                    <td>South-East Asia Region</td>
+                    <td>199535</td>
+                    <td>224925</td>
+                    <td>61975</td>
+                    <td>83627</td>
+                    <td>112418</td>
+                    <td>57.246426</td>
+                    <td>89</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <th>5</th>
+                    <td>5</td>
+                    <td>Western Pacific Region</td>
+                    <td>1319640</td>
+                    <td>155490</td>
+                    <td>176493</td>
+                    <td>128016</td>
+                    <td>213366</td>
+                    <td>178.401366</td>
+                    <td>95</td>
+                    <td>91</td>
+                  </tr>
+                  <tr>
+                    <th>6</th>
+                    <td>6</td>
+                    <td>Worldwide</td>
+                    <td>4211431</td>
+                    <td>1374083</td>
+                    <td>836338</td>
+                    <td>580287</td>
+                    <td>462186</td>
+                    <td>127.234918</td>
+                    <td>86</td>
+                    <td>69</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+
+        <div class="col-lg-1 col-md-4">
+        </div>
+    </div><br>
+
+    <div class="row">
+        <div class="col-lg-1 col-md-4">
+        </div>
+
+        <div class="col-lg-10">
+        <h3>Measles-Containing Vaccine 1 Vaccination Rates for 1-Year-Olds by World Region</h3><br>
+
+        <table border="1" class="dataframe">
+            <thead>
+              <tr style="text-align: right;">
+                <th></th>
+                <th>WHO Region</th>
+                <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+                <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+                <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+                <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+                <th>MCV1 Coverage, 1-Year-Olds (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>0</th>
+                <td>WHO region</td>
+                <td>2018</td>
+                <td>2008</td>
+                <td>1998</td>
+                <td>1988</td>
+                <td>1980.0</td>
+              </tr>
+              <tr>
+                <th>1</th>
+                <td>Global</td>
+                <td>86</td>
+                <td>81</td>
+                <td>71</td>
+                <td>63</td>
+                <td>16.0</td>
+              </tr>
+              <tr>
+                <th>2</th>
+                <td>Africa</td>
+                <td>74</td>
+                <td>68</td>
+                <td>53</td>
+                <td>50</td>
+                <td>6.0</td>
+              </tr>
+              <tr>
+                <th>3</th>
+                <td>Americas</td>
+                <td>90</td>
+                <td>94</td>
+                <td>91</td>
+                <td>74</td>
+                <td>51.0</td>
+              </tr>
+              <tr>
+                <th>4</th>
+                <td>South-East Asia</td>
+                <td>89</td>
+                <td>76</td>
+                <td>60</td>
+                <td>35</td>
+                <td>NaN</td>
+              </tr>
+              <tr>
+                <th>5</th>
+                <td>Europe</td>
+                <td>95</td>
+                <td>95</td>
+                <td>88</td>
+                <td>78</td>
+                <td>55.0</td>
+              </tr>
+              <tr>
+                <th>6</th>
+                <td>Eastern Mediterranean</td>
+                <td>82</td>
+                <td>74</td>
+                <td>70</td>
+                <td>63</td>
+                <td>15.0</td>
+              </tr>
+              <tr>
+                <th>7</th>
+                <td>Western Pacific</td>
+                <td>95</td>
+                <td>95</td>
+                <td>84</td>
+                <td>89</td>
+                <td>5.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-lg-1 col-md-4">
+        </div>
+
+    </div><br>
+
+
+    <div class="row">
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+            <div class="col-lg-10 text-center">
+                <h3>World Health Organization Sources used in this Study</h3>
+                <a class="link" href="https://www.who.int/immunization/monitoring_surveillance/burden/vpd/surveillance_type/active/measles_monthlydata/en/" target="blank">WHO Data on Active Measles and Rubella  (New Tab)</a><br>
+                <a class="link" href="http://apps.who.int/gho/data/node.imr.WHS8_110?lang=en" target="blank">First immunization coverage among 1-year-olds (%) (New Tab)</a><br>
+                <a class="link" href="http://apps.who.int/gho/data/node.imr.MCV2?lang=en" target="blank">Second immunization coverage among 1-year-olds (%) (New Tab)</a><br>
+            </div>
+
+            <div class="col-lg-1 col-md-4">
+            </div>
+
+    </div><br><br>
+-->
+
+</body>
+
+
+
+
+</html>
